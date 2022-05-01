@@ -1,0 +1,8 @@
+<div>
+<mat-form-field appearance="fill">
+  <mat-label>Enter Json</mat-label>
+  <textarea rows="5" cols="10" matInput [(ngModel)]="name" (ngModelChange)="valuechange($event)"></textarea>
+</mat-form-field>
+  <button mat-raised-button color="primary" (click)="generate()">Generate</button>
+</div>
+
