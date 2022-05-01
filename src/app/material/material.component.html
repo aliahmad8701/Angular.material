@@ -1,0 +1,7 @@
+<div *ngIf="json.length>0">
+  <ng-container *ngFor="let item of json">
+  <button *ngIf="item?.type==='Button'" mat-raised-button color="primary" style="position:absolute" [ngStyle]="{'line-height.px': item?.height ,'width.px':item?.width ,'height.px':item?.height ,'left.px':item?.x-10, 'top.px':item?.y}">{{item?.text}}</button>
+  <mat-label *ngIf="item?.type==='Label'"  style="position:absolute" [ngStyle]="{'line-height.px': item?.height ,'width.px':item?.width ,'height.px':item?.height ,'left.px':item?.x, 'top.px':item?.y}">{{item?.text}}</mat-label>
+  <mat-slider *ngIf="item?.type==='Slider'" min="1" max="100" step="1" [value]="item?.value" style="position:absolute" [ngStyle]="{'line-height.px': item?.height ,'width.px':item?.width ,'height.px':item?.height ,'left.px':item?.x-10, 'top.px':item?.y}"></mat-slider>
+  </ng-container>
+  </div>
